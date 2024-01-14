@@ -200,3 +200,14 @@ TODO
 ### SWAGGER E OPENAPI
 
 TODO
+
+<br>
+
+----
+
+<br>
+
+### INICIAR A APLICAÇÃO
+
+Crie um variável de ambient chamada KTOR_ENV e dê o valor development
+altere os TODO dos arquivos de docker, application.conf e gradle.properties
