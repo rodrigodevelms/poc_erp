@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  kotlin_aries_erp_psql:
+    image: "postgres:16-alpine"
+    hostname: "kotlin_aries_erp_psql"
+    container_name: "kotlin_aries_erp_psql"
+    restart: "always"
+    environment:
+      POSTGRES_DB: "todo"
+      POSTGRES_USER: "todo"
+      POSTGRES_PASSWORD: "todo"
+    ports:
+      - "5600:5432"
+    volumes:
+      - "kotlin_aries_erp_psql_data:/var/lib/postgresql/data"
+    networks:
+      - "kotlin_aries_erp_network"
+
+volumes:
+  kotlin_aries_erp_psql_data:
+    name: "kotlin_aries_erp_psql_data"
+    driver: "local"
+
+networks:
+  kotlin_aries_erp_network:
+    name: "kotlin_aries_erp_network"
+    driver: "bridge"
